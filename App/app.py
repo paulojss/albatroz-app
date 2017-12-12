@@ -3,8 +3,9 @@
 *
 *
 """
-from flask import Flask, jsonify
+from flask import Flask, jsonify,url_for
 import random
+import os
 
 from db import file
 from motor import motor
@@ -16,12 +17,13 @@ imagens = motor(file)
 @app.route("/")
 def json_api():
 	
-	
-	print(imagens)
+	imagem = '<img src="albatroz-app/App/640full-amanda-lee-(i).jpg" />'
+	filename = os.listdir('../static/img')
+	print(imagem)
 
 	#noticias = [{ "imagem" : img }]			
 	
-	return imagens=imagens
+	return u'<img src='+filename[0]+'/>'
 	'''
 	<html>
 		<head>
