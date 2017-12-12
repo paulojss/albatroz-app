@@ -31,7 +31,7 @@ def json_img():
 	img = '../static/img/640full-amanda-lee-(i).jpg'
 	
 	#return render_template('index.html') 
-	return '<img src='+img+' />'
+	#return '<img src='+img+' />'
 	#return jsonify(imagem=imagem)
 
 	
