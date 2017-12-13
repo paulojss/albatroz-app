@@ -4,36 +4,48 @@
 *
 """
 from flask import Flask, jsonify, url_for, render_template
-import random
+from random import randint
 import os
 
-from db import file
+from db import ready_database
 from motor import motor
 
 
+
 app = Flask(__name__)
-imagens = motor(file)
+file = ready_database()
+list_imagens = motor(file)
+url_img = ''
 
+IMG_DIR = '/static/img/'
+URL_BASE = 'http://localhost:5000'
 
-
-@app.route("/v1",methods=['GET'])
+@app.route("/ns/v1",methods=['GET'])
 def json_api():
-	img = '/static/img/640full-amanda-lee-(i).jpg'
-	img2 = 'http://localhost:5000'+img
-	imagem =[{'img': img2}]
-	#return render_template('index.html') 
-	#return '<img src='+img+' />'
+	#length = len(list_imagens)
+	#print (randint(0,length))
+	#print ('length ',length)
+	#print(list_imagens)
+
+	#Retira o espaco em vazio da lista
+	for l in list_imagens:
+		if l == '':
+			#print('AHCLSSLSLSLL')
+			list_imagens.remove(l)
+	
+	
+	length = len(list_imagens)
+	print ('length 2',length)
+	count = randint(0,length-1)
+	img = IMG_DIR+list_imagens[count]
+	#print(len(img))
+	#print(list_imagens)
+
+	url_img = URL_BASE+img
+	#print(url_img)
+	imagem =[{'img': url_img}]
 	return jsonify(imagem=imagem)
 
 
-@app.route("/img/m")
-def json_img():
-	img = '../static/img/640full-amanda-lee-(i).jpg'
-	
-	#return render_template('index.html') 
-	#return '<img src='+img+' />'
-	#return jsonify(imagem=imagem)
-
-	
 app.run(debug=True)
 

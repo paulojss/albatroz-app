@@ -8,15 +8,13 @@
 import os
 
 
-file = open('../base_dados/base','r')
-
 """
 
 **Esta funcao le os nemes dos arquivos de imagem localizadas 
 **no diretorio /static/img
 
 """
-def readyDirImg():
+def ready_dir_img():
 
 	#'filename' recebe os nomes e extensao dos arquivos
 	filename = os.listdir('static/img')
@@ -29,19 +27,25 @@ def readyDirImg():
 **dos arquivos imagens do diretorio '/static/img'
 
 """
-def writeDataBase():
-	file = open('../base_dados/base5','w')
+def write_database():
+	file = open('../base_dados/base','w')
 	#print(file)
-	filelist = readyDirImg()
-	#print(filelist)
+	filelist = ready_dir_img()
+	#print('filelist ',filelist)
 
 	text = []
 	for f in filelist:
-		text = f
 		file.write(f)
 		file.write(';')
 		
 	file.close()
+	#Lendo a base de dados
+	return file
+	
+def ready_database():
+	file = write_database()
+	file = open('../base_dados/base','r')
+	return file
 
-writeDataBase()
 
+#print(ready_database())
