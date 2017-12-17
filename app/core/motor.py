@@ -4,8 +4,8 @@
 *Arquivo responsavel por possuir toda a logica da selecao de anuncios
 *
 """
-from db import ready_database
 
+from .db import ready_database
 
 file = ready_database()
 """

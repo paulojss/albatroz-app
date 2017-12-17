@@ -28,7 +28,7 @@ def ready_dir_img():
 
 """
 def write_database():
-	file = open('../base_dados/base','w')
+	file = open('/../base_dados/base','w')
 	#print(file)
 	filelist = ready_dir_img()
 	#print('filelist ',filelist)

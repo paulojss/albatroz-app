@@ -7,12 +7,12 @@ from flask import Flask, jsonify, url_for, render_template
 from random import randint
 import os
 
-from db import ready_database
-from motor import motor
-
+from run import app
+from .db import ready_database
 
 
 app = Flask(__name__)
+
 file = ready_database()
 list_imagens = motor(file)
 url_img = ''
@@ -45,7 +45,4 @@ def json_api():
 	#print(url_img)
 	imagem =[{'img': url_img}]
 	return jsonify(imagem=imagem)
-
-
-app.run(debug=True)
 
