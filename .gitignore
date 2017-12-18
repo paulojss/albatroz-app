@@ -1,7 +1,9 @@
-#Byte-compiled / optimized / DLL files
+#Byte-compiled / optimized / DLL files / SWP
 __pycache__/
 *.py[cod]
 *$py.class
+*.swp
+
 
 #Mac custom attributes file (Desktop Service Store)
 .DS_Store
