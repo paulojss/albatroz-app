@@ -1,0 +1,20 @@
+#Commands Postgresql
+http://pgdocptbr.sourceforge.net/pg80/app-psql.html
+
+#Instalacion Postgresql
+https://wiki.postgresql.org/wiki/Apt
+
+#Vertabelo
+http://www.vertabelo.com/blog/technical-articles/web-app-development-with-flask-sqlalchemy-bootstrap-part-2
+
+#RealPython
+https://realpython.com/blog/python/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/
+
+#Patrick Software Blog
+http://www.patricksoftwareblog.com/flask-tutorial/
+
+#Flask App directory structure
+http://gouthamanbalaraman.com/blog/flask-app-directory-structure.html
+
+#BogoToBogo
+http://www.bogotobogo.com/python/Flask/Python_Flask_App_1_Word_Count_Postgres_SQLAlchemy.php
