@@ -8,7 +8,7 @@ Author: Paulo Jorge
 import unittest
 from app import app
 
-class ProjectTest(unittest.TestCase):
+class ProjectTests(unittest.TestCase):
 	
 	############################
 	#### setup and teardown ####
@@ -18,7 +18,7 @@ class ProjectTest(unittest.TestCase):
 	def setUp(self):
 		app.config['TESTING']=True
 		app.config['DEBUG']=False
-		self.app = app.test_cliet()
+		self.app = app.test_client()
 
 		self.assertEquals(app.debug, False)
 
@@ -32,4 +32,12 @@ class ProjectTest(unittest.TestCase):
 
 	def test_main_page(self):
 		response = self.app.get('/ns/v1', follow_redirects=True)
+<<<<<<< HEAD
 		self.assertI(b'
+=======
+		self.assertIn(b'FULL DATA', response.data)
+
+
+if __name__ == "__main__":
+	unittest.main()
+>>>>>>> add_blueprints

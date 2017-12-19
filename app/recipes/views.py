@@ -9,7 +9,7 @@ Author:Paulo Jorge
 	#### imports ####
 	#################
 
-from flask import Flask, Blueprint
+from flask import render_template, Blueprint
 
 
  	#################
@@ -24,6 +24,6 @@ recipes_blueprint = Blueprint('recipes',__name__, template_folder='templates')
 	#################
 
 
-@recipes_blueprint.route('/ns/v1', methods=['GET']
-def get_full_data():
+@recipes_blueprint.route('/ns/v1', methods=['GET'])
+def full_data():
 	return render_template('index.html')
