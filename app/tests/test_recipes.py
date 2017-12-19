@@ -32,12 +32,8 @@ class ProjectTests(unittest.TestCase):
 
 	def test_main_page(self):
 		response = self.app.get('/ns/v1', follow_redirects=True)
-<<<<<<< HEAD
-		self.assertI(b'
-=======
 		self.assertIn(b'FULL DATA', response.data)
 
 
 if __name__ == "__main__":
 	unittest.main()
->>>>>>> add_blueprints
