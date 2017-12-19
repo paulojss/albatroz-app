@@ -1,6 +1,8 @@
 """
 #app/tests/test_recipes.py
 
+Author: Paulo Jorge
+
 """
 
 import unittest
@@ -30,4 +32,4 @@ class ProjectTest(unittest.TestCase):
 
 	def test_main_page(self):
 		response = self.app.get('/ns/v1', follow_redirects=True)
-		self.assertIn(b'
+		self.assertI(b'
