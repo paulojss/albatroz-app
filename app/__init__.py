@@ -31,8 +31,8 @@ db = SQLAlchemy(app)
 
 
 from app.users.views import users_blueprint
-from app.recipes.views import recipes_blueprint
+from app.api.views import api_blueprint
 
 #register the blueprints
 app.register_blueprint(users_blueprint)
-app.register_blueprint(recipes_blueprint)
+app.register_blueprint(api_blueprint)

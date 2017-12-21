@@ -1,5 +1,5 @@
 """
-app/recipes/views.py
+#app/recipes/views.py
 
 Author:Paulo Jorge
 
@@ -10,20 +10,22 @@ Author:Paulo Jorge
 	#################
 
 from flask import render_template, Blueprint
+from app.models import Image
 
 
  	#################
 	#### config  ####
 	#################
 
-recipes_blueprint = Blueprint('recipes',__name__, template_folder='templates')
-	
+api_blueprint = Blueprint('api',__name__, template_folder='templates')
+
 	
 	#################
 	#### routes  ####
 	#################
 
 
-@recipes_blueprint.route('/ns/v1', methods=['GET'])
+@api_blueprint.route('/ns/v1')
 def full_data():
-	return render_template('index.html')
+	all_data = Image.query.all()
+	return render_template('images.html', images=all_data)

@@ -1,12 +1,12 @@
 from app import db
-from app.models import Recipe
+from app.models import Image
 
 
 # create the database and the database table
 db.create_all()
 
 # insert recipe data
-recipe1 = Recipe('anuncio.jpg')
+recipe1 = Image('anuncio.jpg')
 db.session.add(recipe1)
 
 

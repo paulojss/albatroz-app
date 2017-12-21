@@ -10,8 +10,8 @@ Author: Paulo Jorge
 from app import db
 
 
-class Recipe(db.Model):
-	__tablename__ = "propaganda"
+class Image(db.Model):
+	__tablename__ = "propag"
 
 	id = db.Column(db.Integer, primary_key=True)
 	file_description = db.Column(db.String, nullable=False)
