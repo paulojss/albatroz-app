@@ -11,7 +11,7 @@ from app import db
 
 
 class Image(db.Model):
-	__tablename__ = "propag"
+	__tablename__ = "propaganda"
 
 	id = db.Column(db.Integer, primary_key=True)
 	file_description = db.Column(db.String, nullable=False)
