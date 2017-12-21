@@ -16,6 +16,7 @@
 					<tbody>
 						{% for image in images %}
 						<tr>
+							<td>{{ image.file_name }}</td>
 							<td>{{ image.file_description }}</td>
 						</tr>
 						{% endfor %}

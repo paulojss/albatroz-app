@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% from "_form_macros.html" import render_field %}
+
+{% block content %}
+
+<dir class="add-img">
+	<div class="page-header">
+		<h2>Adionar nova imagem</h2>
+	</div>
+
+	<form action="{{ url_for('api.add_img') }}" method="post">
+		{{ form.csrf_token }}
+		<dl>
+			{{ render_field(form.img_title, placeholder="Nome da imagem") }}
+			{{ render_field(form.img_description, placeholder="Descricao") }}
+		</dl>
+		<button class="btn btn-sm btn-success" type="submit">
+		Adicione imagem</button>
+	</form>
+</dir>
+
+{% endblock %}

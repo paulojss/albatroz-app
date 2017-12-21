@@ -86,10 +86,8 @@ XlsxWriter==0.7.3
 nose2==0.7.3
 Flask-SQLAlchemy==2.3.2
 psycopg2==2.7.3.2
-<<<<<<< HEAD
-Flask-Uploads==0.2.1
 Flask-WTF==0.14.2
-=======
 Flask==0.12.2
 psycopg2==2.7.3.2
->>>>>>> da2eaeed9fff3fbf10a94b864862c3a098c81eb7
+
+requests==2.18.4
