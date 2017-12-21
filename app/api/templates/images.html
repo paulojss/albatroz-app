@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- Styles -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+	</head>
+	<body>
+		<table style="width:100%">
+			<tr>
+				<td>Imagem</td>
+			</tr>
+			{% for image in images %}
+			<tr>
+				<td>{{ image.file_description }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
+	

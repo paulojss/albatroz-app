@@ -10,22 +10,23 @@ Author:Paulo Jorge
 	#################
 
 from flask import render_template, Blueprint
-from app.models import Recipe
+from app.models import Image
 
 
  	#################
 	#### config  ####
 	#################
 
-recipes_blueprint = Blueprint('recipes',__name__, template_folder='templates')
-	
+api_blueprint = Blueprint('api',__name__, template_folder='templates')
+
 	
 	#################
 	#### routes  ####
 	#################
 
 
-@recipes_blueprint.route('/')
-def index():
-	all_recipes = Recipe.query.all()
-	return render_template('recipes.html', recipes=all_recipes)
+@api_blueprint.route('/ns/v1')
+def full_data():
+	all_data = Image.query.all()
+	return render_template('images.html', images=all_data)
+

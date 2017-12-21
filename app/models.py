@@ -10,16 +10,16 @@ Author: Paulo Jorge
 from app import db
 
 
-class Recipe(db.Model):
-	__tablename__ = "propaganda"
+class Image(db.Model):
+	__tablename__ = "propag"
 
 	id = db.Column(db.Integer, primary_key=True)
 	file_description = db.Column(db.String, nullable=False)
-	img_url  = db.Column(db.String, nullable=False)
+	#img_url  = db.Column(db.String, nullable=False)
 
-	def __init__(self, description, url):
+	def __init__(self, description):
 		self.file_description = description
-		self.img_url  = url
+		#self.img_url  = url
 
 
 	def __repr__(self):

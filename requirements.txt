@@ -1,11 +1,11 @@
-"""
+
 #Reference:
 #https://blog.myhro.info/2014/05/cuide-bem-do-seu-requirements-dot-txt
 
 #pip freeze | grep -i package_name > requirements.txt
 #pip freeze | grep -i package_name >> requirements.txt
 
-"""
+
 
 #apturl==0.5.2
 beautifulsoup4==4.4.1
@@ -86,5 +86,10 @@ XlsxWriter==0.7.3
 nose2==0.7.3
 Flask-SQLAlchemy==2.3.2
 psycopg2==2.7.3.2
+<<<<<<< HEAD
 Flask-Uploads==0.2.1
 Flask-WTF==0.14.2
+=======
+Flask==0.12.2
+psycopg2==2.7.3.2
+>>>>>>> da2eaeed9fff3fbf10a94b864862c3a098c81eb7
