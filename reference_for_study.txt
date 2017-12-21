@@ -23,5 +23,5 @@ http://www.bogotobogo.com/python/Flask/Python_Flask_App_1_Word_Count_Postgres_SQ
 #Explore Flask
 http://exploreflask.readthedocs.io/en/latest/blueprints.html
 
-
-
+#Blog Myhro
+https://blog.myhro.info/2014/05/cuide-bem-do-seu-requirements-dot-txt
