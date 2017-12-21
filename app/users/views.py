@@ -26,4 +26,8 @@ users_blueprint = Blueprint('users',__name__, template_folder='templates')
 
 @users_blueprint.route('/login')
 def login():
-	return render_template('login.html') 
+	return render_template('login.html')
+
+@users_blueprint.route('/up', methods=['POST'])
+def update():
+	return "<h1>Sucesso</h1>" 

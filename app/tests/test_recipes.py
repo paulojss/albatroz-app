@@ -32,7 +32,7 @@ class ProjectTests(unittest.TestCase):
 
 	def test_main_page(self):
 		response = self.app.get('/ns/v1', follow_redirects=True)
-		self.assertIn(b'FULL DATA', response.data)
+		self.assertIn(b'Sucesso', response.data)
 
 
 if __name__ == "__main__":
