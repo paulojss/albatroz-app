@@ -9,7 +9,7 @@ Author:Paulo Jorge
 	#### imports ####
 	#################
 
-from flask import render_template, Blueprint
+from flask import render_template, Blueprint, request
 
 from app.models import Image
 from .forms import AddItemForm
@@ -37,7 +37,7 @@ def full_data():
 def add_img():
 	form = AddItemForm(request.form)
 	if request.method == 'POST':
-		if form.Validate_on_Submit():
+		if form.validate_on_submit():
 			new_img = Image(form.img_title.data, form.img_description.data)
 			db.session(new_img)
 			db.session.commit()
