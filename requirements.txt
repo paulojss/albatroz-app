@@ -90,3 +90,5 @@ Flask-WTF==0.14.2
 Flask==0.12.2
 psycopg2==2.7.3.2
 requests==2.18.4
+Flask-Uploads==0.2.1
+Flask-Admin==1.5.0

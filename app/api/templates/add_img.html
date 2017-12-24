@@ -8,11 +8,12 @@
 		<h2>Adionar nova imagem</h2>
 	</div>
 
-	<form action="{{ url_for('api.add_img') }}" method="post">
+	<form action="{{ url_for('api.add_img') }}" method="post" enctype="multipart/form-data">
 		{{ form.csrf_token }}
 		<dl>
-			{{ render_field(form.img_title, placeholder="Nome da imagem") }}
+			{{ render_field(form.img_name, placeholder="Nome da imagem") }}
 			{{ render_field(form.img_description, placeholder="Descricao") }}
+			{{ render_field(form.img_file) }}
 		</dl>
 		<button class="btn btn-sm btn-success" type="submit">
 		Adicione imagem</button>

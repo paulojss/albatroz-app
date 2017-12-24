@@ -6,7 +6,7 @@ from app.models import Image
 db.create_all()
 
 # insert image data
-recipe1 = Image('imagem.jpg','imagem de anuncio de biscoito')
+recipe1 = Image('imagem-test','0938PPJ.jpeg','imagem de anuncio de biscoito','nnnn/nnn/nnn/nn')
 db.session.add(recipe1)
 
 # commit the changes

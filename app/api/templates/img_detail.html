@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="user-profile">
+	<div class="page-header">
+		<h2>{{ image.img_name }}</h2>
+	</div>
+	<div class="row">
+		<div class="panel panel-primary">
+			<div class="panel-heading">Descricao</div>
+			<div class="panel-body">{{ image.title.data }}</div>
+		</div>
+		{% if image.img_url %}
+			<img src="{{ api.Image.img_url }}" alt="{{ api.Image.filename }}" style="width: 600px; height: 450px;">
+		{% endif %}
+	</div>
+</div>
+
+{% endblock %}

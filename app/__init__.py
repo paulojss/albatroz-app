@@ -29,12 +29,12 @@ db = SQLAlchemy(app)
 
 
 # Configure the image uploading via flask-uploads
-#image = UploadSet('images', IMAGES)
-#configure_uploads(app, images)
+images = UploadSet('images', IMAGES)
+configure_uploads(app, images)
 
-#################
-### blueprints ##
-#################
+##################
+### blueprints ###
+##################
 
 
 from app.users.views import users_blueprint
