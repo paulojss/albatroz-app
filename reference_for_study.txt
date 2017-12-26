@@ -25,3 +25,9 @@ http://exploreflask.readthedocs.io/en/latest/blueprints.html
 
 #Blog Myhro
 https://blog.myhro.info/2014/05/cuide-bem-do-seu-requirements-dot-txt
+
+
+https://blog.da2k.com.br/2015/03/05/javascript-entendendo-e-criando-suas-proprias-promises/
+
+
+http://pythonclub.com.br/configurando-um-servidor-de-producao-para-aplicacoes-python.html

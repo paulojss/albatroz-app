@@ -1,18 +1,18 @@
 """
+#app/users/forms.py
 
 
 """
 
 
 from flask_wtf import Form
-from wtforms import StringField
-from wtforms.validators import DataRequired
-from flask_wtf.file import FileField, FileAllowed, FileRequired
-from app import images
+from wtforms import StringField, PasswordField
+from wtforms.validators import DataRequired, Length, EqualTo, Email
 
 
-
-class AddUsersForm():
-	recipe_title = StringField('Recipe Title', validators=[DataRequired()])
-    recipe_description = StringField('Recipe Description', validators=[DataRequired()])
-    recipe_image = FileField('Recipe Image', validators=[FileRequired(), FileAllowed(images, 'Images only!')])
+class RegisterForm(Form):
+	first_name = StringField('Nome', validators=[DataRequired(), Length(min=3, max=40)])
+	last_name = StringField('Sobrenome' validators=[DataRequired(), Length(min=3, max=40)])
+	email = StringField('Email', validators=[DataRequired(), Email(), Length(min=)])
+	password = PasswordField('Senha', validators=[DataReqired(), Length(min=6, max=40)])
+	confirm = PasswordField('Confirme sua senha', validators=[DataRequired(), EqualTo('password')])
