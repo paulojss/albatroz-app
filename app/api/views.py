@@ -68,11 +68,6 @@ def api_img():
 	n = randint(0, c-1)# 'n' recebe um numero aleatorio
 	url = str(all_data[n])
 	
-	url_img = [
-	{ 'url': url },
-	{' count': n }]
-	
-	#return jsonify(url_img=url_img)
 	return jsonify({'url': url})
 
 

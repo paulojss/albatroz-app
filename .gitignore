@@ -12,5 +12,5 @@ __pycache__/
 .idea/
 
 #instance folder
-#instance/
-#*.cfg
+instance/
+*.cfg

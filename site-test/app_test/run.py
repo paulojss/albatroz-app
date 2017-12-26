@@ -11,7 +11,7 @@ def index():
 	
 	dicionario = json.loads(response.read().decode('ISO-8859-1'))
 	url = dicionario['url']
-	print(url)
+	#print(url)
 	return render_template('index.html',url=url)
 
 
