@@ -33,7 +33,7 @@ api_blueprint = Blueprint('api',__name__, template_folder='templates')
 
 
 @api_blueprint.route('/')
-def full_data():
+def index():
 	all_data = Image.query.all()
 	return render_template('images.html', images=all_data)
 
