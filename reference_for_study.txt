@@ -35,3 +35,6 @@ http://pythonclub.com.br/configurando-um-servidor-de-producao-para-aplicacoes-py
 # CORS
 https://stackoverflow.com/questions/28461001/python-flask-cors-issue
 https://pypi.python.org/pypi/Flask-Cors
+
+# Using geolocation
+https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation
