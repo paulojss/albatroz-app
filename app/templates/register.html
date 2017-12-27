@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% from "_form_macros.html" import render_field %}
+
+{% block content %}
+<div class="user-registration">
+	<form action="{{ url_for('users.register') }}" method="post">
+		{{ form.csrf_token }}
+		<dl>
+			{{ render_field( form.first_name, placeholder="Nome") }}
+			{{ render_field( form.last_name, placeholder="Sobrenome") }}
+			{{ render_field( form.email, placeholder="Email") }}
+			{{ render_field( form.password, placeholder="Senha")}}
+			{{ render_field( form.confirm, placeholder="ConfirmSenha")}}
+		</dl>
+		<button class="btn btn-sm btn-success" type="submit">Criar Nova Conta</button>
+	</form>
+</div>
+{% endblock %}

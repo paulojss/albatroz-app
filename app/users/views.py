@@ -9,15 +9,19 @@ Author:Paulo Jorge
 	#### imports ####
 	#################
 
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash, redirect, url_for
+from sqlalchemy.exc import IntegrityError
+from flask_admin.helpers import flash_errors
 
 from app import db
+from app.models import User
+from app.users.forms import RegisterForm
 
 	#################
 	#### config  ####
 	#################
 
-users_blueprint = Blueprint('users',__name__, template_folder='templates')
+users_blueprint = Blueprint('users',__name__)
 
 
 	#################
@@ -29,7 +33,7 @@ users_blueprint = Blueprint('users',__name__, template_folder='templates')
 def register():
 	form = RegisterForm(request.form)
 	if request.method == 'POST':
-		if form_validate_on_submit():
+		if form.validate_on_submit():
 			try:
 				new_user = User(form.first_name.data, form.last_name.data, form.email.data, form.password.data)
 				new_user.authenticated = True

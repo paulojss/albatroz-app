@@ -24,7 +24,7 @@ from .forms import AddItemForm
 	#### config  ####
 	#################
 
-api_blueprint = Blueprint('api',__name__, template_folder='templates')
+api_blueprint = Blueprint('api',__name__)
 
 	
 	#################
