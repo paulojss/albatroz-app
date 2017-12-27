@@ -31,3 +31,7 @@ https://blog.da2k.com.br/2015/03/05/javascript-entendendo-e-criando-suas-propria
 
 
 http://pythonclub.com.br/configurando-um-servidor-de-producao-para-aplicacoes-python.html
+
+# CORS
+https://stackoverflow.com/questions/28461001/python-flask-cors-issue
+https://pypi.python.org/pypi/Flask-Cors
